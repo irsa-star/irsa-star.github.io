@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Landing Page Professional</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        /* Mengganti Font Default */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fcfcfc;
+        }
+
+        /* Animasi CSS Kustom */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards ease-out;
+        }
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Efek Hover Card Melayang */
+        .hover-scale {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 15px; /* Ujung membulat */
+        }
+        .hover-scale:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+        }
+
+        /* Hero Section dengan Background Gradient Modern */
+        .hero {
+            background: linear-gradient(135deg, rgba(12, 235, 82, 0.9), rgba(102, 16, 242, 0.9)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Efek Parallax */
+            color: #fff;
+            padding: 140px 0;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        /* Icon pada Service */
+        .service-icon {
+            font-size: 3.5rem;
+            color: #0e6e41;
+            background: rgba(13, 110, 253, 0.1);
+            width: 90px;
+            height: 90px;
+            line-height: 90px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+
+        /* Pricing Plan */
+        .pricing-plan {
+            transition: transform 0.3s ease;
+            border: none;
+            border-radius: 15px;
+        }
+        .pricing-plan:hover {
+            transform: translateY(-15px);
+        }
+        .pricing-plan .card-header {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            letter-spacing: 2px;
+        }
+
+        /* Testimonial */
+        #testimonialCarousel .card {
+            border: none;
+            background: #ffffff;
+            border-radius: 20px;
+        }
+        .quote-icon {
+            font-size: 2rem;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-5 d-flex align-items-center" href="#">
+                <img src="Copy of logo-amikom.png" alt="Logo Amikom" style="height: 40px; width: auto;" class="me-2">
+                UNIVERSITAS AMIKOM YOGYAKARTA
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonial</a></li>
+                </ul>
+                <a href="#pricing" class="btn btn-primary rounded-pill px-4 ms-lg-3 mt-2 mt-lg-0">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero text-center shadow-lg">
+        <div class="container fade-in-up">
+            <h1 class="display-4 fw-bold mb-4">Solusi Digital <br> Untuk Masa Depan</h1>
+            <p class="lead fw-light mb-5 px-md-5">Kami membantu bisnis Anda tumbuh lebih cepat, lebih pintar, dan mendominasi pasar dengan teknologi terkini.</p>
+            <a href="#services" class="btn btn-light btn-lg rounded-pill px-5 py-3 text-primary shadow fw-bold">Mulai Transformasi</a>
+        </div>
+    </section>
+
+    <section id="services" class="container mt-5 pt-5">
+        <div class="text-center mb-5 fade-in-up">
+            <h2 class="fw-bold">Layanan Unggulan Kami</h2>
+            <div class="bg-primary mx-auto rounded" style="width: 60px; height: 4px;"></div>
+        </div>
+        <div class="row g-4 text-center">
+            <div class="col-md-4 fade-in-up">
+                <div class="card h-100 hover-scale shadow-sm py-4">
+                    <div class="card-body">
+                        <div class="service-icon"><i class="bi bi-laptop"></i></div>
+                        <h5 class="card-title fw-bold text-dark">Web Development</h5>
+                        <p class="card-text text-muted">Pembuatan website profesional, responsif, modern, dan sangat SEO friendly.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 fade-in-up" style="animation-delay: 0.2s;">
+                <div class="card h-100 hover-scale shadow-sm py-4">
+                    <div class="card-body">
+                        <div class="service-icon"><i class="bi bi-rocket-takeoff"></i></div>
+                        <h5 class="card-title fw-bold text-dark">Digital Marketing</h5>
+                        <p class="card-text text-muted">Meningkatkan brand awareness dan penjualan meroket melalui strategi digital.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 fade-in-up" style="animation-delay: 0.4s;">
+                <div class="card h-100 hover-scale shadow-sm py-4">
+                    <div class="card-body">
+                        <div class="service-icon"><i class="bi bi-palette"></i></div>
+                        <h5 class="card-title fw-bold text-dark">UI/UX Design</h5>
+                        <p class="card-text text-muted">Desain antarmuka pengguna yang estetik, modern, dan sangat mudah digunakan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="mt-5 py-5" style="background-color: #f1f5f9;">
+        <div class="container">
+            <div class="text-center mb-5 fade-in-up">
+                <h2 class="fw-bold">Apa Kata Klien Kami?</h2>
+                <div class="bg-primary mx-auto rounded" style="width: 60px; height: 4px;"></div>
+            </div>
+            
+            <div id="testimonialCarousel" class="carousel slide pb-4" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8 text-center fade-in-up">
+                                <div class="card shadow p-4 mx-3">
+                                    <i class="bi bi-quote quote-icon mb-2"></i>
+                                    <p class="fs-5 fst-italic text-secondary">"Sejak menggunakan layanan dari tim ini, omzet bisnis kami naik hingga 200%. Tampilan website sangat profesional dan support-nya responsif!"</p>
+                                    <div class="mt-4">
+                                        <img src="https://via.placeholder.com/80" class="rounded-circle shadow-sm border border-3 border-white mb-2" alt="User">
+                                        <h6 class="fw-bold mb-0">Ahmad Kurniawan</h6>
+                                        <small class="text-muted">CEO, TechNesia</small>
+                                    </div>
+                                    <div class="text-warning mt-2">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8 text-center">
+                                <div class="card shadow p-4 mx-3">
+                                    <i class="bi bi-quote quote-icon mb-2"></i>
+                                    <p class="fs-5 fst-italic text-secondary">"Tim yang luar biasa! Mereka sangat mengerti apa yang kami butuhkan untuk menargetkan pasar milenial."</p>
+                                    <div class="mt-4">
+                                        <img src="https://via.placeholder.com/80" class="rounded-circle shadow-sm border border-3 border-white mb-2" alt="User">
+                                        <h6 class="fw-bold mb-0">Siti Aminah</h6>
+                                        <small class="text-muted">Founder, BeautyGlow</small>
+                                    </div>
+                                    <div class="text-warning mt-2">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-primary rounded-circle p-3" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-primary rounded-circle p-3" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="container mt-5 py-5 mb-5">
+        <div class="text-center mb-5 fade-in-up">
+            <h2 class="fw-bold">Pilih Paket Investasi Anda</h2>
+            <p class="text-muted">Harga transparan tanpa biaya tersembunyi.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4 col-lg-3 fade-in-up">
+                <div class="card pricing-plan shadow-sm h-100 text-center">
+                    <div class="card-header bg-light py-3 fw-bold text-secondary">BASIC</div>
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="card-title fw-bold text-dark">Rp 199<span class="fs-5">k</span><small class="text-muted fw-light fs-6">/bln</small></h2>
+                        <ul class="list-unstyled mt-4 mb-4 text-start mx-auto">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> 5 Fitur Utama</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Support Email</li>
+                            <li class="mb-2 text-muted"><i class="bi bi-x-circle me-2"></i> Custom Domain</li>
+                        </ul>
+                        <button class="btn btn-outline-primary rounded-pill w-100 mt-auto fw-bold">Pilih Basic</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 fade-in-up" style="animation-delay: 0.2s;">
+                <div class="card pricing-plan shadow-lg h-100 text-center border-primary border-2" style="transform: scale(1.05);">
+                    <div class="card-header bg-primary text-white py-3 fw-bold">⭐ PALING LAKU</div>
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="card-title fw-bold text-dark">Rp 499<span class="fs-5">k</span><small class="text-muted fw-light fs-6">/bln</small></h2>
+                        <ul class="list-unstyled mt-4 mb-4 text-start mx-auto">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Semua Fitur Basic</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Prioritas Support 24/7</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Custom Domain</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Akses Analitik</li>
+                        </ul>
+                        <button class="btn btn-primary rounded-pill w-100 mt-auto fw-bold py-2 shadow">Pilih Pro</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3 fade-in-up" style="animation-delay: 0.4s;">
+                <div class="card pricing-plan shadow-sm h-100 text-center">
+                    <div class="card-header bg-dark text-white py-3 fw-bold">ENTERPRISE</div>
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="card-title fw-bold text-dark">Rp 999<span class="fs-5">k</span><small class="text-muted fw-light fs-6">/bln</small></h2>
+                        <ul class="list-unstyled mt-4 mb-4 text-start mx-auto">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Fitur Unlimited</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Manager Akun Khusus</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> SLA 99.9%</li>
+                        </ul>
+                        <button class="btn btn-outline-dark rounded-pill w-100 mt-auto fw-bold">Hubungi Kami</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold"><i class="bi bi-hexagon-fill text-primary me-2"></i>Universitas Amikom Yogyakarta</h5>
+                    <p class="text-muted">Menciptakan solusi digital inovatif untuk membantu bisnis Anda berkembang di era modern.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold">Tautan Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none hover-white">Tentang Kami</a></li>
+                        <li><a href="#services" class="text-muted text-decoration-none hover-white">Layanan</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none hover-white">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold">Ikuti Kami</h5>
+                    <a href="#" class="text-white fs-4 me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white fs-4 me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white fs-4 me-3"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-white fs-4"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="border-top border-secondary pt-3 text-center text-light">
+                <small>© 2026 Amikom 🍀 by Sri Irsa Ramayani.</small>
+            </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
